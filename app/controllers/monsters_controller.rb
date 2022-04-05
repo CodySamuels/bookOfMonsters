@@ -22,6 +22,20 @@ class MonstersController < ApplicationController
     end
   end
 
+  def edit
+    @monster = Monster.find(params[:id])
+  end
+
+  def update
+    @monster = Monster.find(params[:id])
+
+    if @monster.update(monster_params)
+      redirect_to @monster
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
   private
   def monster_params
     params.require(:monster).permit(:name, :ac, :hp)
