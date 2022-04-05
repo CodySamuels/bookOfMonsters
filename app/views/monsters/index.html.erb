@@ -1,9 +1,15 @@
-<h1>Monsters!</h1>
+<h1>Munsters!</h1>
 
 <ul>
   <% @monsters.each do |monster| %>
-      <a href="/monsters/<%= monster.id %>"><%= monster.name %>
-      <li>HP: <%= monster.hp %></li>
-      <li>AC: <%= monster.ac %></li>
+    <li>
+        <%= link_to monster.name, monster %>
+    </li>
+    <li>HP: <%= monster.hp %></li>
+    <li>AC: <%= monster.ac %></li>
+    <br>
   <% end %>
 </ul>
+
+
+<%= link_to "Add a munster!", new_monster_path %>
