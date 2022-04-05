@@ -1,1 +1,9 @@
-<h1>Hello, Rails!</h1>
+<h1>Monsters!</h1>
+
+<ul>
+  <% @monsters.each do |monster| %>
+      <a href="/monsters/<%= monster.id %>"><%= monster.name %>
+      <li>HP: <%= monster.hp %></li>
+      <li>AC: <%= monster.ac %></li>
+  <% end %>
+</ul>
