@@ -1,0 +1,9 @@
+<h1><%= @monster.name %></h1>
+
+<p>HP: <%= @monster.hp %></p>
+<p>AC: <%= @monster.ac %></p>
+
+<ul>
+    <li><%= link_to "Back", root_path %></li>
+    <li><%= link_to "Edit", edit_monster_path(@monster) %></li>
+</ul>
