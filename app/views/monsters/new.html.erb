@@ -1,31 +1,3 @@
 <h1>New Munster!</h1>
 
-<%= form_with model: @monster do |form| %>
-  <div>
-    <%= form.label :name %><br>
-    <%= form.text_field :name %>
-    <% @monster.errors.full_messages_for(:name).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
-
-  <div>
-    <%= form.label :ac %><br>
-    <%= form.text_field :ac %><br>
-    <% @monster.errors.full_messages_for(:ac).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
-
-    <div>
-    <%= form.label :hp %><br>
-    <%= form.text_field :hp %><br>
-    <% @monster.errors.full_messages_for(:hp).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
+<%= render "form", monster: @monster %>
