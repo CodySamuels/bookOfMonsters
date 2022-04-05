@@ -6,7 +6,7 @@
 <ul>
     <li><%= link_to "Back", root_path %></li>
     <li><%= link_to "Edit", edit_monster_path(@monster) %></li>
-    <li><%= button_to "Destroy", @monster, 
-                        method: :delete, 
-                        data: { confirm: 'Are you sure?' } %></li>
 </ul>
+    <%= button_to "Delete Munster", @monster, 
+                        method: :delete, 
+                        data: { confirm: 'Are you sure?' } %>
